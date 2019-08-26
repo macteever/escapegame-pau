@@ -2,17 +2,51 @@
 			<footer class="footer" role="contentinfo">
 				<div class="container-fluid" id="contact">
 					<div class="container">
-						<!-- <div class="row justify-content-between align-items-center footer-widgets mt-30 mb-30">
-							<!-- <div class="col-xl-4 col-lg-4 col-12 fs-13 text-white">
-									<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Widget Area 1', 'html5blank') )?>
-							</div> -->
-						</div>
 						<div class="row justify-content-center">
-							<nav class="footer-menu" role="navigation">
-								<div class="row h-100 align-items-center">
-									<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
+							<nav class="footer-menu">
+								<div class="row align-items-center">
+									<div class="col-xl-4 col-lg-4 col-12">
+										<h3 class="text-white fs-18 mb-30 fw-600">Nous contacter</h3>
+										<div class="text-white fs-15">
+											<?php the_field('footer_adress', 'option'); ?>
+										</div>
+									</div>
+									<div class="col-xl-4 col-lg-4 col-12">
+										<?php echo do_shortcode('[contact-form-7 id="53" title="Formulaire de contact 1"]'); ?>
+									</div>
+									<div class="col-xl-4 col-lg-4 col-12 text-right">
+										<h3 class="text-white fs-18 mb-30 fw-600">Nos horaires</h3>
+										<div class="text-white fs-15">
+											<?php the_field('footer_horaires', 'option'); ?>
+										</div>
+										<div class="mt-30">
+											<?php
+
+											$link = get_field('footer_lien', 'option');
+
+											if( $link ):
+												$link_url = $link['url'];
+												$link_title = $link['title'];
+												?>
+												<a class="btn-gold" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+											<?php endif; ?>
+										</div>
+									</div>
 								</div>
 							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid subfooter">
+					<div class="row text-white fs-13">
+						<div class="col-xl-4 col-lg-4 col-12">
+
+						</div>
+						<div class="col-xl-4 col-lg-4 col-12">
+							<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
+						</div>
+						<div class="col-xl-4 col-lg-4 col-12 text-right">
+							Création web
 						</div>
 					</div>
 				</div>
