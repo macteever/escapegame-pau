@@ -30,7 +30,7 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 			<!-- header -->
-			<header class="header anim-300 clear" role="banner">
+			<header class="header anim-300 clear nav-down" role="banner">
 				<!-- nav -->
 				<div class="container-fluid menu-container anim-300">
            <?php require 'includes/header-left.php'; ?>

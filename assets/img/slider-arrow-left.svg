@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 51 60.5" style="enable-background:new 0 0 51 60.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#333333;stroke-width:2;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="128.0%" id="filter-2" width="132.6%" x="-16.3%" y="-10.0%">
+	<feOffset  dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	
+		<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0.820793705   0 0 0 0 0.820793705   0 0 0 0 0.820793705  0 0 0 0.5 0">
+		</feColorMatrix>
+</filter>
+<title>Group 6 Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="SINGLE-MISSION" transform="translate(-468.000000, -392.000000)">
+		
+			<g id="Group-6-Copy" transform="translate(493.500000, 423.000000) rotate(-180.000000) translate(-493.500000, -423.000000) translate(472.000000, 398.000000)">
+			<g id="Combined-Shape">
+				<g class="st0">
+					<path id="path-1_2_" d="M15,0.8c13.3,0,24,10.7,24,24v2c0,13.3-10.7,24-24,24H-4v-50H15z"/>
+				</g>
+				<g>
+					<path id="path-1_1_" class="st1" d="M15,0.8c13.3,0,24,10.7,24,24v2c0,13.3-10.7,24-24,24H-4v-50H15z"/>
+				</g>
+			</g>
+			<polyline id="Path-2-Copy-2" class="st2" points="14,19.8 20,25.8 14,31.8 			"/>
+		</g>
+	</g>
+</g>
+</svg>

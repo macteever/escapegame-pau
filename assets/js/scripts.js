@@ -5,22 +5,61 @@
 
    // RESIZE HEADER SCROLLTOP
 
-	 $(window).on( "scroll", function() {
-		 if ( $(window).scrollTop() > 80) {
-			 $('body').addClass("fixed");
-			 $('.site-branding').addClass('opacity0');
-		 }else{
-			 $('body').removeClass("fixed");
-			 $('.site-branding').removeClass('opacity0');
+	 // $(window).on( "scroll", function() {
+		//  if ( $(window).scrollTop() > 80) {
+		// 	 $('body').addClass("fixed");
+		// 	 $('.site-branding').addClass('opacity0');
+		//  }else{
+		// 	 $('body').removeClass("fixed");
+		// 	 $('.site-branding').removeClass('opacity0');
+		//  }
+	 // });
+	 // $(window).on( "scroll", function() {
+		//  if ( $(window).scrollTop() > 200) {
+		// 	 $('.site-branding').addClass('d-none');
+		//  }else{
+		// 	 $('.site-branding').removeClass('d-none');
+		//  }
+	 // });
+
+	 // Hide Header on on scroll down
+		 var didScroll;
+		 var lastScrollTop = 0;
+		 var delta = 5;
+		 var navbarHeight = $('header').outerHeight();
+
+		 $(window).scroll(function(event){
+				 didScroll = true;
+		 });
+
+		 setInterval(function() {
+				 if (didScroll) {
+						 hasScrolled();
+						 didScroll = false;
+				 }
+		 }, 50);
+
+		 function hasScrolled() {
+				 var st = $(this).scrollTop();
+
+				 // Make sure they scroll more than delta
+				 if(Math.abs(lastScrollTop - st) <= delta)
+						 return;
+
+				 // If they scrolled down and are past the navbar, add class .nav-up.
+				 // This is necessary so you never see what is "behind" the navbar.
+				 if (st > lastScrollTop && st > navbarHeight){
+						 // Scroll Down
+						 $('header').removeClass('nav-down').addClass('nav-up');
+				 } else {
+						 // Scroll Up
+						 if(st + $(window).height() < $(document).height()) {
+								 $('header').removeClass('nav-up').addClass('nav-down');
+						 }
+				 }
+
+				 lastScrollTop = st;
 		 }
-	 });
-	 $(window).on( "scroll", function() {
-		 if ( $(window).scrollTop() > 200) {
-			 $('.site-branding').addClass('d-none');
-		 }else{
-			 $('.site-branding').removeClass('d-none');
-		 }
-	 });
 
  		// APPARITION
 			 var delay = 0;
@@ -84,18 +123,35 @@
 
 			/* SLICK SLIDER CABINET */
 
-			$('.home-tem-slider').slick({
+			$('.home-missions-row').slick({
 			  infinite: true,
 				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				fade: true,
+				dots: true,
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
 			});
 
-			$('.home-tem-prev').click(function(){
-	      $('.home-tem-slider').slick('slickPrev');
+			// Init fancyBox
+			$().fancybox({
+			  selector : '.slick-single .slick-slide:not(.slick-cloned)',
+			  hash     : false
+			});
+			$('.slider-single').slick({
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+				infinite: true,
+			  arrows: false,
+				autoplay: true
+			});
+
+			$('.single-mission-prev').click(function(){
+	      $('.slider-single').slick('slickPrev');
 	    });
-			$('.home-tem-next').click(function(){
-	      $('.home-tem-slider').slick('slickNext');
+			$('.single-mission-next').click(function(){
+	      $('.slider-single').slick('slickNext');
 	    });
 
 
