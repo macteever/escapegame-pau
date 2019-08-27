@@ -7,7 +7,7 @@
 								<div class="row align-items-center">
 									<div class="col-xl-4 col-lg-4 col-12">
 										<h3 class="text-white fs-18 mb-30 fw-600">Nous contacter</h3>
-										<div class="text-white fs-15">
+										<div class="text-white fs-15 footer-contacter">
 											<?php the_field('footer_adress', 'option'); ?>
 										</div>
 									</div>
@@ -39,11 +39,16 @@
 				</div>
 				<div class="container-fluid subfooter">
 					<div class="row text-white fs-13">
-						<div class="col-xl-4 col-lg-4 col-12">
-
+						<div class="col-xl-4 col-lg-4 col-12 d-flex text-white">
+							<span class="fs-13">Nous suivre</span>
+							<div>
+				        <a href="#" target="blank"><i class="fa fa-facebook-official fs-15 ml-15 text-white" aria-hidden="true"></i></a>
+				        <a href="#" target="blank"><i class="fa fa-linkedin fs-15 ml-15 text-white" aria-hidden="true"></i></a>
+				      </div>
 						</div>
-						<div class="col-xl-4 col-lg-4 col-12">
+						<div class="col-xl-4 col-lg-4 col-12 footer-extra-menu d-flex justify-content-center">
 							<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
+							<span class="fs-13 text-white"> ~ Escape Game Pau</span>
 						</div>
 						<div class="col-xl-4 col-lg-4 col-12 text-right">
 							Création web

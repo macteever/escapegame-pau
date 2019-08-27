@@ -66,7 +66,7 @@
 					<div class="col-xl-3 col-lg-3 col-12 missions-related">
 						<div class="missions-related-child">
 							<div class="pr-30">
-								<h3 class="fs-22 fw-600 pl-50 mb-10 text-green">Avez-vous essayé :</h3>
+								<h3 class="fs-22 fw-600 pl-50 mb-10 text-green text-right">Avez-vous essayé :</h3>
 							</div>
 								<?php
 								$myposts = get_posts(array(

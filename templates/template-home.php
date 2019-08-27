@@ -1,10 +1,10 @@
 <?php /* Template Name: Home */
    get_header(); ?>
    <main role="main" class="home-main">
-     <section id="home-top" class="container-fluid" style="background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 10%, #000000 100%);
-    				background: -o-linear-gradient(180deg, rgba(0,0,0,0) 10%, #000000 100%);
-    				background: linear-gradient(180deg, rgba(0,0,0,0) 10%, #000000 100%),
-            url(<?php the_field('home_bkg'); ?>)">
+     <section id="home-top" class="container-fluid" style="background: -webkit-linear-gradient(160deg, rgba(0,0,0,0) 10%, #000000 100%);
+    				background: -o-linear-gradient(160deg, rgba(0,0,0,0) 10%, #000000 100%);
+    				background: linear-gradient(160deg, rgba(0,0,0,0) 10%, #000000 100%),
+            url(<?php the_field('home_bkg'); ?>); background-size: cover;">
          <div class="container">
            <div class="row justify-content-center home-top-content align-items-center">
              <div class="col-12 text-center mb-80">
