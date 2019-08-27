@@ -7,10 +7,10 @@
             url(<?php the_field('home_bkg'); ?>); background-size: cover;">
          <div class="container">
            <div class="row justify-content-center home-top-content align-items-center">
-             <div class="col-12 text-center mb-80">
-               <h1 class="mb-0"><?php the_title(); ?></h1>
-               <h3 class="home-slogan"><?php bloginfo('description'); ?></h3>
-               <div class="text-center mt-80">
+             <div class="col-12 text-center mb-80 ">
+               <h1 class="mb-0 apparition-2"><?php the_title(); ?></h1>
+               <h3 class="home-slogan apparition-2"><?php bloginfo('description'); ?></h3>
+               <div class="text-center mt-80 apparition-2">
                  <a class="btn-brd-gold" href="#">Découvrir les missions</a>
                </div>
              </div>
@@ -46,7 +46,7 @@
            <?php if ( have_rows('concept_infos') ): ?>
              <?php while ( have_rows('concept_infos') ) : the_row();
              ?>
-             <div class="col-xl-4 col-lg-4 col-12 d-flex flex-column align-items-center">
+             <div class="col-xl-4 col-lg-4 col-12 d-flex flex-column align-items-center bloc-concept">
                <div class="d-flex align-items-center mb-30">
                  <?php
                  $image = get_sub_field('img');
@@ -87,7 +87,7 @@
                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                <?php endif; ?>
              </div>
-             <div class="col-xl-6 col-lg-6 col-12">
+             <div class="col-xl-6 col-lg-6 col-12 home-slide-content">
                <div class="text-white fs-44 fw-600 mb-30 text-right">
                  <?php the_sub_field('title'); ?>
                </div>
@@ -115,7 +115,7 @@
      <section class="container-fluid home-tarifs">
        <div class="container">
          <div class="row justify-content-center mb-20">
-           <div class="col-xl-10 col-lg-10 col-12 d-flex justify-content-between align-items-end pl-0 pr-0">
+           <div class="col-xl-10 col-lg-10 col-12 d-flex justify-content-between align-items-end padding-resp pl-0 pr-0">
              <div class="fs-72 text-white fw-700">
                <?php the_field('tarifs_title'); ?>
              </div>
@@ -129,7 +129,7 @@
            <?php while ( have_rows('tarifs_line') ) : the_row();
            ?>
            <div class="row justify-content-center">
-             <div class="col-xl-10 col-lg-10 col-12 d-flex justify-content-between align-items-center home-line-tarif">
+             <div class="col-xl-10 col-lg-10 col-12 d-flex justify-content-between align-items-center home-line-tarif padding-resp">
                <div class="fs-18 text-white">
                  <?php the_sub_field('nb_joueurs'); ?> :
                </div>

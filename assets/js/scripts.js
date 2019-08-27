@@ -22,6 +22,14 @@
 		//  }
 	 // });
 
+	 $(document).ready(function(){
+		 $(".btn-question-faq").click(function(){
+
+			 $(this).toggleClass("rotate-90");
+			 $(this).parent().toggleClass("translate-reponse");
+		 });
+	 });
+
 	 // Hide Header on on scroll down
 		 var didScroll;
 		 var lastScrollTop = 0;
@@ -153,6 +161,7 @@
 			$('.single-mission-next').click(function(){
 	      $('.slider-single').slick('slickNext');
 	    });
+
 
 
     }).resize();

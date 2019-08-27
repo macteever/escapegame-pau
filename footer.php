@@ -2,19 +2,19 @@
 			<footer class="footer" role="contentinfo">
 				<div class="container-fluid" id="contact">
 					<div class="container">
-						<div class="row justify-content-center">
+						<div class="d-flex justify-content-center">
 							<nav class="footer-menu">
 								<div class="row align-items-center">
-									<div class="col-xl-4 col-lg-4 col-12">
+									<div class="col-xl-4 col-lg-4 col-12 footer-bloc-resp">
 										<h3 class="text-white fs-18 mb-30 fw-600">Nous contacter</h3>
 										<div class="text-white fs-15 footer-contacter">
 											<?php the_field('footer_adress', 'option'); ?>
 										</div>
 									</div>
-									<div class="col-xl-4 col-lg-4 col-12">
+									<div class="col-xl-4 col-lg-4 col-12 footer-bloc-resp">
 										<?php echo do_shortcode('[contact-form-7 id="53" title="Formulaire de contact 1"]'); ?>
 									</div>
-									<div class="col-xl-4 col-lg-4 col-12 text-right">
+									<div class="col-xl-4 col-lg-4 col-12 footer-bloc-resp text-right">
 										<h3 class="text-white fs-18 mb-30 fw-600">Nos horaires</h3>
 										<div class="text-white fs-15">
 											<?php the_field('footer_horaires', 'option'); ?>
