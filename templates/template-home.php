@@ -120,8 +120,7 @@
                <?php the_field('tarifs_title'); ?>
              </div>
              <div class="d-flex">
-               <span class="text-green fs-15 fw-600">Tarifs réduits*</span>
-               <span class="text-gold fs-15 fw-600 ml-15">Tarifs normaux*</span>
+               <span class="text-gold fs-15 fw-600 ml-15">Tarifs</span>
              </div>
            </div>
          </div>
@@ -134,7 +133,6 @@
                  <?php the_sub_field('nb_joueurs'); ?> :
                </div>
                <div class="d-flex">
-                 <p class="text-green fs-24 fw-600"><?php the_sub_field('tarif_reduit'); ?><span class="fs-15 fw-300">/j</span></p>
                  <p class="text-gold fs-24 fw-600 ml-50"><?php the_sub_field('tarif_normal'); ?><span class="fs-15 fw-300">/j</span></p>
                </div>
              </div>
