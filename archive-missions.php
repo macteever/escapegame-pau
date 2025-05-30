@@ -3,7 +3,7 @@
   <section class="container-fluid archive-content">
     <div class="container">
       <div class="row mb-50">
-        <div class="col-12 pl-0">
+        <div class="col-12 pl-0 archive-mission-title">
           <?php
           if ( function_exists('yoast_breadcrumb') ) {
             yoast_breadcrumb( '<p class="text-gold fs-18 mb-0" id="breadcrumbs">','</p>' );
@@ -12,12 +12,12 @@
           <h1 class="fw-700 fs-60 mt-0 mb-0 text-white">Nos missions de jeux</h1>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center archive-row-mission">
         <?php
         while ( have_posts() ) :
           the_post();
           ?>
-          <div class="col-xl-4 col-lg-4 col-12 p-2 anim-300 p-relative mission-thumbnail">
+          <div class="apparition-2 col-xl-4 col-lg-4 col-md-6 col-12 mb-15 anim-300 p-relative mission-thumbnail">
             <a href="<?php echo esc_url( get_permalink()); ?>">
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php echo get_the_post_thumbnail(); ?>

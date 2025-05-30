@@ -10,8 +10,8 @@
              <div class="col-12 text-center mb-80 ">
                <h1 class="mb-0 apparition-2"><?php the_title(); ?></h1>
                <h3 class="home-slogan apparition-2"><?php bloginfo('description'); ?></h3>
-               <div class="text-center mt-80 apparition-2">
-                 <a class="btn-brd-gold" href="#">Découvrir les missions</a>
+               <div class="text-center mt-80 apparition-2 cta-anim">
+                 <a class="btn-brd-gold" href="<?php echo home_url() . '/missions'; ?>">Découvrir les missions</a>
                </div>
              </div>
            </div>
@@ -62,12 +62,12 @@
              <?php endwhile; ?>
            <?php endif; ?>
          </div>
-         <div class="row justify-content-center mt-120">
+         <div class="row justify-content-center home-concept-links mt-120">
            <div class="mr-10">
-             <a class="btn-gold" href="#">Réserver</a>
+             <a class="btn-gold" href="<?php echo home_url() . '/reserver'; ?>">Réserver</a>
            </div>
            <div class="ml-10">
-             <a class="btn-brd-white" href="#">Une question ?</a>
+             <a class="btn-brd-white" href="<?php echo home_url() . '/faq'; ?>">Une question ?</a>
            </div>
          </div>
        </div>
@@ -94,7 +94,7 @@
                <div class="text-white fs-18 lh-30 fw-300 mb-50 text-right mw-80 ml-auto">
                  <?php the_sub_field('content'); ?>
                </div>
-               <div class="text-right">
+               <div class="text-right cta-anim">
                  <?php
                  $link = get_sub_field('lien');
 
@@ -102,7 +102,7 @@
                    $link_url = $link['url'];
                    $link_title = $link['title'];
                    ?>
-                   <a class="text-gold fs-22 fw-600" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
+                   <a class="btn-brd-gold fw-600" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
                  <?php endif; ?>
                </div>
              </div>
@@ -165,7 +165,7 @@
                 <?php the_sub_field('content'); ?>
                </div>
                <div class="">
-                 <div class="mt-30">
+                 <div class="mt-30 cta-anim">
                    <?php
                    $link = get_sub_field('lien');
 
@@ -173,7 +173,7 @@
                      $link_url = $link['url'];
                      $link_title = $link['title'];
                      ?>
-                     <a class="text-green fs-22 fw-600" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
+                     <a class="btn-brd-green fw-600" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
                    <?php endif; ?>
                  </div>
                </div>

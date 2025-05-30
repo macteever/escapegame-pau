@@ -1,9 +1,17 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117506952-7"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-117506952-7');
+		</script>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) // { echo ' :'; }  bloginfo('name'); ?></title>
-			<!-- Global site tag (gtag.js) - Google Analytics -->
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<!-- <link href="https://twitter.com/Webmaster_bdx" rel="publisher" />
 		<link href="https://www.facebook.com/webmaster.bordeaux/" rel="publisher" />
@@ -33,8 +41,8 @@
 			<header class="header anim-300 clear nav-down" role="banner">
 				<!-- nav -->
 				<div class="container-fluid menu-container anim-300">
-           <?php require 'includes/header-left.php'; ?>
-        </div>
+					<?php require 'includes/header-left.php'; ?>
+				</div>
 				<!-- /nav -->
 			</header>
 			<!-- /header -->
@@ -43,3 +51,39 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'burger-menu' ) ); ?>
 				</div>
 			</nav>
+
+			<!-- MODAL OPENING -->
+
+			<div class="modal-opening apparition-3 anim-300">
+				<div class="row justify-content-center">
+					<?php if ( have_rows('modal_annonce', 'option') ): ?>
+						<?php while ( have_rows('modal_annonce', 'option') ) : the_row(); ?>
+							<div class="fs-36 fw-700 text-white text-center mb-20">
+								<?php the_sub_field('title', 'option'); ?>
+							</div>
+							<div class="fs-28 text-white text-center mb-30">
+								<?php the_sub_field('subtitle', 'option'); ?>
+							</div>
+							<div class="fs-18 fw-300 text-white text-center">
+								<?php the_sub_field('content', 'option'); ?>
+							</div>
+							<div class="cta-anim mt-50 d-flex justify-content-center">
+								<?php
+
+								$link = get_sub_field('lien', 'option');
+
+								if( $link ):
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									?>
+									<a class="btn-brd-gold" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+								<?php endif; ?>
+							</div>
+
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+				<div class="close-modal-opening">
+					<img class="btn-question-faq" src="<?php echo get_template_directory_uri(); ?>/assets/img/close.svg" alt="Escape Game Pau" class="anim-300">
+				</div>
+			</div>

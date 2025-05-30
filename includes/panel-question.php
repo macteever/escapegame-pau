@@ -1,13 +1,13 @@
   <section class="panel-question p-relative o-hidden">
     <div class="container-fluid before-panel">
-      <div class="container">
+      <div class="container zi-9999 p-relative">
         <div class="row justify-content-center">
           <div clas="col-12 text-center">
             <h2 class="fs-36 uppercase text-white fw-600 text-center"><?php the_field('help_title', 'option'); ?></h2>
             <div class="text-white fs-20 text-center mw-60 mx-auto mt-30">
               <?php the_field('help_content', 'option'); ?>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center flex-wrap panel-questions-link">
               <div class="mt-30 mr-10">
                 <?php
                 $link = get_field('help_lien1', 'option');

@@ -7,7 +7,7 @@
 				<div class="row">
 					<aside class="col-xl-4 col-lg-4 col-12 p-relative pl-0 pr-0">
 						<!-- TEST SLIDER FANCYBOX -->
-						<div class="slider-single">
+						<div class="slider-single apparition-2">
 							<?php
 							if( have_rows('single_gallerie') ):
 								while ( have_rows('single_gallerie') ) : the_row();
@@ -32,11 +32,11 @@
 						<div class="pr-15">
 		          <?php
 		          if ( function_exists('yoast_breadcrumb') ) {
-		            yoast_breadcrumb( '<p class="text-green fs-15 mb-0" id="breadcrumbs">','</p>' );
+		            yoast_breadcrumb( '<p class="text-green fs-15 mb-0 apparition-2" id="breadcrumbs">','</p>' );
 		          }
 		           ?>
-		          <h1 class="fw-700 fs-60 mt-0 mb-0"><?php the_title(); ?></h1>
-							<div class="d-flex align-items-center justify-content-between mt-30 mw-80 ml-auto">
+		          <h1 class="fw-700 fs-60 mt-0 mb-0 apparition-2"><?php the_title(); ?></h1>
+							<div class="d-flex align-items-center justify-content-between mt-30 mw-90 ml-auto single-infos apparition-2">
 								<?php
 								if( have_rows('single_infos') ):
 									while ( have_rows('single_infos') ) : the_row();
@@ -50,15 +50,15 @@
 								endif;
 								?>
 							</div>
-							<div class="fs-16 lh-26 text-grey mw-90 ml-auto mt-15">
+							<div class="fs-17 lh-28 text-grey mw-80 ml-auto mt-50 apparition-2 single-content-child">
 								<?php the_content(); ?>
 							</div>
-							<div class="d-flex mt-80 justify-content-end">
+							<div class="d-flex mt-80 justify-content-end single-reserve-cta flex-wrap">
 								<div class="mr-10">
-		              <a class="btn-gold" href="#">Réserver</a>
+		              <a class="btn-gold" href="<?php echo home_url() . '/reserver'; ?>">Réserver</a>
 		            </div>
 		            <div class="ml-10">
-		              <a class="btn-brd-green" href="#">Une question ?</a>
+		              <a class="btn-brd-green" href="<?php echo home_url() . '/faq'; ?>">Une question ?</a>
 		            </div>
 							</div>
 		        </div>
@@ -77,7 +77,7 @@
 								));
 								foreach ( $myposts as $post ) : setup_postdata( $post );
 								?>
-								<div class="mission-related-thumbnail mt-15 mb-15">
+								<div class="mission-related-thumbnail mt-15 mb-15 apparition-2">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 										<div class="anim-300 p-relative">
 											<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" alt="escape game pau">
@@ -99,7 +99,7 @@
 							<?php wp_reset_postdata();
 							?>
 							<div class="mt-50 text-center pb-50">
-								<a href="<?php home_url() . '/missions' ?>" class="btn-brd-green text-center">Voir toutes les missions</a>
+								<a href="<?php echo home_url() . '/missions' ?>" class="btn-brd-green text-center">Voir toutes les missions</a>
 							</div>
 						</div>
 					</div>
@@ -117,5 +117,4 @@
 		<?php endif; ?>
 		</section>
 	</main>
-
 <?php get_footer(); ?>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 24 0 24 24 0 24"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOME-SLIDE-2" transform="translate(-1103.000000, -252.000000)">
+            <g id="Group-3" transform="translate(1103.000000, 252.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M12.0000117,10.1817422 L8.0603985,6.24213281 L6.24213891,8.06039063 L10.1817287,12 L6.24213891,15.9396094 L8.0603985,17.7578672 L12.0000117,13.8182578 L15.9396015,17.7578672 L17.7578845,15.9396094 L13.8182713,12 L17.7578845,8.06039063 L15.9396015,6.24213281 L12.0000117,10.1817422 Z M12.0000117,24 C5.37258337,24 0,18.6274219 0,12 C0,5.37260156 5.37258337,0 12.0000117,0 C18.6274166,0 24,5.37260156 24,12 C24,18.6274219 18.6274166,24 11.9999883,24 L12.0000117,24 Z" id="Fill-1" fill="#CDAD7D" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -39,19 +39,19 @@
 				</div>
 				<div class="container-fluid subfooter">
 					<div class="row text-white fs-13">
-						<div class="col-xl-4 col-lg-4 col-12 d-flex text-white">
+						<div class="col-xl-4 col-lg-4 col-auto d-flex footer-rs text-white">
 							<span class="fs-13">Nous suivre</span>
 							<div>
 				        <a href="#" target="blank"><i class="fa fa-facebook-official fs-15 ml-15 text-white" aria-hidden="true"></i></a>
 				        <a href="#" target="blank"><i class="fa fa-linkedin fs-15 ml-15 text-white" aria-hidden="true"></i></a>
 				      </div>
 						</div>
-						<div class="col-xl-4 col-lg-4 col-12 footer-extra-menu d-flex justify-content-center">
+						<div class="col-xl-4 col-lg-4 col-auto footer-extra-menu d-flex justify-content-center">
 							<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
 							<span class="fs-13 text-white"> ~ Escape Game Pau</span>
 						</div>
-						<div class="col-xl-4 col-lg-4 col-12 text-right">
-							Création web
+						<div class="col-xl-4 col-lg-4 col-auto text-right footer-signature">
+
 						</div>
 					</div>
 				</div>

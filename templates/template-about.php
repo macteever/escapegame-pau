@@ -1,15 +1,15 @@
 <?php /* Template Name: Teambuilding */ get_header(); ?>
 	<main role="main" class="main-content o-hidden">
-		<section id="teambuilding-top" class="container-fluid" style="background: -webkit-linear-gradient(180deg, #FFFFFF 10%, rgba(255,255,255,0.00) 100%);
-		 background: -o-linear-gradient(180deg, #FFFFFF 10%, rgba(255,255,255,0.00) 100%);
-		 background: linear-gradient(180deg, #FFFFFF 10%, rgba(255,255,255,0.00) 100%),
+		<section id="teambuilding-top" class="container-fluid" style="background: -webkit-linear-gradient(180deg, #FFFFFF 15%, rgba(255,255,255,0.00) 100%);
+		 background: -o-linear-gradient(180deg, #FFFFFF 15%, rgba(255,255,255,0.00) 100%);
+		 background: linear-gradient(180deg, #FFFFFF 15%, rgba(255,255,255,0.00) 100%),
 		 url(<?php the_field('team_bkg'); ?>); background-size: cover;">
 		 <div class="container h-100">
 			 <?php if ( have_rows('team_top_page') ): ?>
 				 <?php while ( have_rows('team_top_page') ) : the_row();
 				 ?>
 			 	<div class="row h-100 team-top-page">
-			 		<div class="col-auto apparition-2">
+			 		<div class="col-xl-auto col-lg-auto col-12 apparition-2">
 			 			<h3 class="text-green fs-18"><?php the_sub_field('subtitle'); ?></h3>
 						<h1 class="fs-72 fw-600 mb-30 mt-0"><?php the_title(); ?></h1>
 						<div class="mw-60 fs-18 lh-32"><?php the_sub_field('content'); ?></div>
@@ -38,14 +38,14 @@
 					<div class="col-12 uppercase fs-44 fw-700 ls-5 text-center mb-80">
 						<?php the_sub_field('title'); ?>
 					</div>
-					<div class="col-xl-5 col-lg-5 col-md-6 col-12">
+					<div class="col-xl-5 col-lg-5 col-12 team-avantages-img">
 						<?php
 						$image = get_sub_field('img');
 						if ( !empty($image) ): ?>
 						  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<?php endif; ?>
 					</div>
-					<div class="col-xl-5 col-lg-5 col-md-6 col-12 d-flex flex-column">
+					<div class="col-xl-5 col-lg-5 col-12 d-flex flex-column">
 						<?php if ( have_rows('repeater') ): ?>
 							<?php while ( have_rows('repeater') ) : the_row();
 							?>
@@ -82,7 +82,7 @@
 					<?php the_sub_field('title'); ?>
 				</div>
 				<div class="row">
-					<div class="col-xl-6 col-lg-6 col-12" style="background: url(<?php the_sub_field('img'); ?>); background-size: cover;">
+					<div class="col-xl-6 col-lg-6 col-12 recrutement-img" style="background: url(<?php the_sub_field('img'); ?>); background-size: cover;">
 					</div>
 					<div class="col-xl-6 col-lg-6 col-12" style="background-color: #F0F0F0;">
 						<div class="recrutement-content">
@@ -92,7 +92,7 @@
 							<div class="fs-17 lh-32">
 								<?php the_sub_field('content'); ?>
 							</div>
-							<div class="mt-80">
+							<div class="mt-80 cta-anim">
 								<?php
 								$link = get_sub_field('lien');
 
@@ -100,7 +100,7 @@
 									$link_url = $link['url'];
 									$link_title = $link['title'];
 									?>
-									<a class="btn-brd-gold fw-600 text-darkgrey" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
+									<a class="btn-brd-green fw-600 text-darkgrey" href="<?php echo esc_url($link_url); ?>" ><?php echo esc_html($link_title); ?></a>
 							   <?php endif; ?>
 							</div>
 						</div>

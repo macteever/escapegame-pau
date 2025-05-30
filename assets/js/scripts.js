@@ -1,32 +1,38 @@
-(function ($, root, undefined) {
+	(function ($, root, undefined) {
 
 	$(document).ready(function(){
 
+		// MODAL OPENING IF NEW USER
 
-   // RESIZE HEADER SCROLLTOP
+		if(localStorage.getItem('popState') != 'shown'){
+        $(".modal-opening").delay(2000).fadeIn();
+        localStorage.setItem('popState','shown')
+				$(window).on( "scroll", function() {
+					if ( $(window).scrollTop() > 100) {
+						$('.modal-opening').removeClass("apparition-3");
+						$('.modal-opening').removeClass("animation-fade-up");
 
-	 // $(window).on( "scroll", function() {
-		//  if ( $(window).scrollTop() > 80) {
-		// 	 $('body').addClass("fixed");
-		// 	 $('.site-branding').addClass('opacity0');
-		//  }else{
-		// 	 $('body').removeClass("fixed");
-		// 	 $('.site-branding').removeClass('opacity0');
-		//  }
-	 // });
-	 // $(window).on( "scroll", function() {
-		//  if ( $(window).scrollTop() > 200) {
-		// 	 $('.site-branding').addClass('d-none');
-		//  }else{
-		// 	 $('.site-branding').removeClass('d-none');
-		//  }
-	 // });
+						$('.modal-opening').addClass("animation-fade-down");
+						$('.modal-opening').fadeOut();
+					}
+				});
+
+				$(".close-modal-opening").click(function(){
+					$('.modal-opening').addClass('disappear');
+				});
+    }else {
+				$(".modal-opening").hide();
+    		$(".modal-opening").delay(2000).fadeOut();
+    }
+
+
+	// FAQ
 
 	 $(document).ready(function(){
-		 $(".btn-question-faq").click(function(){
+		 $(".faq-questions-content").click(function(){
 
-			 $(this).toggleClass("rotate-90");
-			 $(this).parent().toggleClass("translate-reponse");
+			 $(this).find('.btn-question-faq').toggleClass("rotate-90");
+			 $(this).find('.reponse-content').toggleClass('translate-reponse');
 		 });
 	 });
 
