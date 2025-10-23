@@ -24,6 +24,22 @@
          </div>
        </div>
      </section>
+     <?php if ( get_field('img') ) : $image = get_field('img'); ?>
+      <section class="prom-banner flex justify-center">
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+
+      </section>
+     <?php endif; ?>
+
+     <?php if ( get_field('img_bis') ) : $image = get_field('img_bis'); ?>
+      <section class="prom-banner flex justify-center">
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+
+      </section>
+     <?php endif; ?>
+     
      <section class="container-fluid home-concept">
        <div class="container">
          <?php if ( have_rows('concept_present') ): ?>

@@ -1065,6 +1065,16 @@ input[type="submit"]{
 .subfooter{
 	padding: 8px 50px;
 }
+.prom-banner{
+	display: flex;
+	justify-content: center;
+	padding: 5rem 0 0;
+	background-color: #000000;
+}
+.prom-banner img{
+	transform: translateY(-10rem);
+}
+
 
 /*********** PAGE 404 *************/
 
