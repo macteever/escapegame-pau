@@ -36,14 +36,40 @@
 		          }
 		           ?>
 		          <h1 class="fw-700 fs-60 mt-0 mb-0 apparition-2"><?php the_title(); ?></h1>
-							<div class="d-flex align-items-center justify-content-between mt-30 mw-90 ml-auto single-infos apparition-2">
+							<div class="d-flex flex-wrap justify-content-end align-items-center mt-30 mw-90 ml-auto single-infos apparition-2">
 								<?php
 								if( have_rows('single_infos') ):
 									while ( have_rows('single_infos') ) : the_row();
 									?>
-										<span class="before-diff fs-14 p-relative"><span class="fw-600">Difficulté : </span><?php the_sub_field('difficulte'); ?></span>
-										<span class="before-genre fs-14 p-relative"><span class="fw-600">Genre : </span><?php the_sub_field('genre'); ?></span>
-										<span class="before-joueur fs-14 p-relative"><span class="fw-600">Joueurs : </span><?php the_sub_field('joueurs'); ?></span>
+										<?php if ( get_sub_field('difficulte') ) : ?>
+										<span class="before-diff fs-14 p-relative">
+											<span class="fw-600">Difficulté : </span><?php the_sub_field('difficulte'); ?>
+										</span>
+										<?php endif; ?>
+
+										<?php if ( get_sub_field('duree') ) : ?>
+										<span class="before-time fs-14 p-relative">
+											<span class="fw-600">Durée : </span><?php the_sub_field('duree'); ?>
+										</span>
+										<?php endif; ?>
+
+										<?php if ( get_sub_field('genre') ) : ?>
+										<span class="before-genre fs-14 p-relative">
+											<span class="fw-600">Genre : </span><?php the_sub_field('genre'); ?>
+										</span>
+										<?php endif; ?>
+
+										<?php if ( get_sub_field('joueurs') ) : ?>
+										<span class="before-joueur fs-14 p-relative">
+											<span class="fw-600">Joueurs : </span><?php the_sub_field('joueurs'); ?>
+										</span>
+										<?php endif; ?>
+
+										<?php if ( get_sub_field('reussite') ) : ?>
+										<span class="before-reussite fs-14 p-relative">
+											<span class="fw-600">Réussite : </span><?php the_sub_field('reussite'); ?>%
+										</span>
+										<?php endif; ?>
 									<?php
 									endwhile;
 									else :

@@ -12,14 +12,15 @@
           <h1 class="fw-700 fs-60 mt-0 mb-0 text-white">Nos missions de jeux</h1>
         </div>
       </div>
-      <div class="row justify-content-center archive-row-mission">
+      <div class="row justify-content-start archive-row-mission">
         <?php
         while ( have_posts() ) :
           the_post();
           ?>
           <div class="apparition-2 col-xl-4 col-lg-4 col-md-6 col-12 mb-15 anim-300 p-relative mission-thumbnail">
             <a href="<?php echo esc_url( get_permalink()); ?>">
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+              <article id="post-<?php the_ID(); ?>" <?php post_class('position-relative'); ?>>
+                <div class="thumbnail-filter"></div>
                 <?php echo get_the_post_thumbnail(); ?>
 
                 <div class="mission-hover-thumbnail anim-300">

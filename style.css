@@ -785,12 +785,20 @@ margin-left: auto;
 .main-archive #breadcrumbs a{
 	color: #CDAD7D;
 }
+.thumbnail-filter{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 2.68%, rgba(0, 0, 0, 0.60) 100%);	
+}
 .mission-hover-thumbnail{
 	position: absolute;
 	bottom: 50px;
 	left: 30px;
-	mix-blend-mode: exclusion;
-  width: calc(100% - 80px);
+	/* mix-blend-mode: exclusion; */
+  	width: calc(100% - 80px);
 }
 .mission-thumbnail:hover{
 	transform: translateY(-15px);
@@ -840,8 +848,23 @@ margin-left: auto;
 .single-missions #breadcrumbs a{
 	color: #2A5E5C;
 }
+.single-infos{
+	gap: 20px 60px;
+}
+.before-reussite::before{
+	content: url(assets/img/social_leaderboard.svg);
+	display: block;
+	left: -30px;
+	position: absolute;
+}
 .before-diff::before{
 	content: url(assets/img/diificult-shape.svg);
+	display: block;
+	left: -30px;
+	position: absolute;
+}
+.before-time::before{
+	content: url(assets/img/alarm.svg);
 	display: block;
 	left: -30px;
 	position: absolute;
@@ -858,6 +881,7 @@ margin-left: auto;
 	left: -30px;
 	position: absolute;
 }
+
 .missions-related{
 	padding: 35vh 0px 0px;
   max-height: 100vh;
